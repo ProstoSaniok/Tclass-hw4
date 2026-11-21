@@ -3,9 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Камень ножницы бумага</title>
+
+    <link rel="stylesheet" href="src/style/main.css">
+
+    <script src="./circle.js" defer></script>
+    <script src="./tooltip.js" defer></script>
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    
+    <h1>Камень ножницы бумага</h1>
+    <div class="game">
+        <div class="game-info">
+            <div class="game-info-panel">
+                <a class="button new-game">Новая игра</a>
+                <a class="button game-rules">Правила игры</a>
+            </div>
+            <div class="counter">
+                <div class="counter-label">
+                    <p>Раунд</p>
+                </div>
+                <div class="counter-num">
+                    <p>0</p>
+                </div>
+                <div class="counter-back"></div>
+            </div>
+        </div>
+        <div class="game-choices">
+            <div class="game-choice">
+                <a class="game-choice-icon" style="--icon-mask: url('/public/img/icons/choices/rock.svg')">
+                    <img src="public/img/icons/choices/rock.svg" alt="Rock">
+                    <span class="icon-effect"></span>
+                </a>
+                <a class="game-choice-label">Камень</a>
+            </div>
+            <div class="game-choice">
+                <a class="game-choice-icon" style="--icon-mask: url('/public/img/icons/choices/scissors.svg')">
+                    <img src="public/img/icons/choices/scissors.svg" alt="Scissors">
+                    <span class="icon-effect"></span>
+                </a>
+                <a class="game-choice-label">Ножницы</a>
+            </div>
+            <div class="game-choice">
+                <a class="game-choice-icon" style="--icon-mask: url('/public/img/icons/choices/paper.svg')">
+                    <img src="public/img/icons/choices/paper.svg" alt="Paper">
+                    <span class="icon-effect"></span>
+                </a>
+                <a class="game-choice-label">Бумага</a>
+            </div>
+        </div>
+
+        <div class="game-points">
+            <div class="counter-points">
+                <div class="counter-img">
+                    <img class="player-icon has-tooltip" data-tooltip="Игрок" src="public/img/icons/player.svg" alt="Player Logo">
+                </div>
+                <div class="counter-num">
+                    <p>0</p>
+                </div>
+                <div class="counter-back"></div>
+            </div>
+            <div class="counter-points">
+                <div class="counter-img" >
+                    <img class="computer-icon has-tooltip" data-tooltip="Компьютер" src="public/img/icons/computer.svg" alt="Computer Logo">
+                </div>
+                <div class="counter-num">
+                    <p>0</p>
+                </div>
+                <div class="counter-back"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-info">
+            <p>2026 ДЗ №4</p>
+            <div class="vertical-delimiter-line"></div>
+            <div class="vertical-delimiter-line"></div>
+            <a class="button-footer" href="https://github.com/ProstoSaniok/Tclass-hw4">Репозиторий</a>
+        </div>
+        <div class="footer-info">
+            <a href="https://github.com/ProstoSaniok" target="_blank">
+                <img class="prosto-saniok-logo" src="public/img/logos/prosto-saniok.svg" alt="ProstoSaniok Logo">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>

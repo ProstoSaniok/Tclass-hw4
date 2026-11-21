@@ -1,0 +1,30 @@
+a {
+    padding: 0;
+}
+
+a.button-footer, a.button, a.game-choice-label {
+    color: var(--dark-color);
+    text-decoration: none;
+    background-color: var(--button-color);
+    border-radius: var(--container-border);
+
+    height: var(--control-height);
+    padding: 0 var(--control-padding);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a.button:hover {
+    background-color: var(--dark-accent-color);
+}
+
+a.button-footer {
+    background-color: var(--light-color);
+}
+
+a.button-footer:hover {
+    background-color: var(--medium-color);
+}

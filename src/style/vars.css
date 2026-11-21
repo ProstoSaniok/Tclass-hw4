@@ -1,0 +1,35 @@
+:root {
+    --light-color: #F5F5F5;
+    --medium-color: #E1E1E1;
+    --medium-dark-color: #D3D3D3;
+    --dark-color: #333333;
+    --accent-color: #FFDD2D;
+    --dark-accent-color: #FFCD33;
+    --background-color: var(--medium-color);
+    --text-color: var(--dark-color);
+    --button-color: var(--accent-color);
+
+    --control-height: 60px;
+    --control-padding: 40px;
+    --container-border: 40px;
+    --control-border: 30px;
+    --container-padding: 20px;
+}
+
+@font-face {
+  font-family: 'TinkoffSans-Regular';
+  src: url('../../public/fonts/TinkoffSans-Regular.woff2') format('woff2'), url('../../public/fonts/TinkoffSans-Bold.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TinkoffSans-Medium';
+  src: url('../../public/fonts/TinkoffSans-Medium.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TinkoffSans-Bold';
+  src: url('../../public/fonts/TinkoffSans-Bold.woff2') format('woff2');
+  font-style: normal;
+}

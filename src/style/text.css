@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "TinkoffSans-Regular", sans-serif;
+    font-size: 25px;
+}
+
+h1 {
+    font-family: "TinkoffSans-Bold", sans-serif;
+    font-size: 55px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+footer, div.counter, div.counter-points, a.button, a.game-choice-label {
+    font-family: "TinkoffSans-Medium", sans-serif;
+    text-align: center;
+}
+
+footer {
+    font-size: 20px;
+}
+
+a.game-choice-label {
+    font-size: 35px;
+}

@@ -1,0 +1,172 @@
+div.game {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+    width: auto;
+    height: 620px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+
+    background-color: var(--light-color);
+
+    border-radius: var(--container-border);
+    padding: var(--container-padding);
+}
+
+div.game-info, div.game-points, div.game-info-panel {
+    display: flex;
+    align-items: center;
+}
+
+div.game-info, div.game-points {
+    flex-shrink: 0;
+}
+
+div.game-info {
+    justify-content: space-between;
+}
+
+div.game-info-panel {
+    gap: 20px;
+}
+
+div.game-points {
+    gap: 20px;
+}
+
+div.game-choices {
+    display: flex;
+    flex: 1 1 0;
+    min-height: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    gap: 20px;
+}
+
+div.game-choice {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) var(--control-height);
+    flex: 1 1 0;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+div.game-choice.is-lowered {
+    transform: translateY(500px);
+}
+
+div.game-choice.is-selected {
+    transform: scale(1.1);
+}
+
+/* Круг помогла мне написать нейронка */
+
+a.game-choice-icon {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 1 / 1;
+    place-self: center;
+}
+
+a.game-choice-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.icon-effect {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+
+    mask-image: var(--icon-mask);
+    mask-size: contain;
+    mask-position: calc(50%) calc(50%);
+    mask-repeat: no-repeat;
+    mask-mode: alpha;
+}
+
+a.game-choice-label {
+    position: relative;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+
+    overflow: hidden;
+    isolation: isolate;
+    background-color: var(--medium-color);
+}
+
+.icon-effect::before, a.game-choice-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 70px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+
+    transform: translate(var(--mouse-x, 0px), var(--mouse-y, 0px))
+               translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+
+    transition: none;
+}
+
+a.game-choice-label::before {
+    z-index: -1;
+}
+
+a.game-choice-icon.has-pointer .icon-effect::before,
+a.game-choice-label.has-pointer::before {
+    opacity: 1;
+    transition: transform 0.05s ease-out;
+}
+
+.icon-effect.is-rippling::before,
+a.game-choice-label.is-rippling::before {
+    opacity: 1;
+    background-color: transparent;
+    border: 35px solid var(--accent-color);
+    box-sizing: border-box;
+    animation: choice-circle-shrink 300ms forwards;
+}
+
+@keyframes choice-circle-shrink {
+    0% {
+        border-width: 35px;
+        opacity: 1;
+    }
+    100% {
+        border-width: 0;
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    a.game-choice-icon.has-pointer .icon-effect::before,
+    a.game-choice-label.has-pointer::before {
+        transition: none;
+    }
+
+    .icon-effect.is-rippling::before,
+    a.game-choice-label.is-rippling::before {
+        animation: none;
+        border-width: 0;
+        opacity: 1;
+    }
+}
