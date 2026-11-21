@@ -1,0 +1,9 @@
+img.prosto-saniok-logo {
+    display: flex;
+    align-items: center;
+    height: 44px;
+}
+
+img.player-icon, img.computer-icon {
+    height: 80px;
+}

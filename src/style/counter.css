@@ -1,0 +1,60 @@
+div.counter-points, div.counter {
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+
+    height: var(--control-height);
+    border-radius: var(--control-border);
+    padding: 0;
+}
+
+div.counter-points {
+    border-top-left-radius: 0;
+    height: max-content;
+
+    align-items: flex-end;
+}
+
+div.counter-label {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+}
+
+div.counter-img {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100px;
+}
+
+div.counter-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--accent-color);
+
+    width: var(--control-height);
+    height: var(--control-height);
+    box-sizing: border-box;
+    aspect-ratio: 1 / 1;
+
+    border-top-right-radius: var(--control-border);
+}
+
+div.counter-back {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--control-height);
+
+    border-radius: var(--control-border);
+    background-color: var(--background-color);
+}

@@ -1,0 +1,31 @@
+body {
+    cursor: url("../../public/img/cursors/cursor.svg") 0 0, default;
+}
+
+a, div.game-choices {
+    cursor: url("../../public/img/cursors/pointer.svg") 12 12, pointer;
+}
+
+p, h1, h2 {
+    cursor: url("../../public/img/cursors/text-cursor.svg") 12 12, pointer;
+}
+
+.has-tooltip {
+    cursor: none;
+} 
+
+.cursor-tooltip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    pointer-events: none;
+    box-sizing: border-box;
+    max-width: min(280px, calc(100vw - 16px));
+    overflow-wrap: anywhere;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #848484, #4a4a4a);
+    color: var(--light-color);
+    font-size: 15px;
+}

@@ -1,0 +1,44 @@
+@import "vars.css";
+
+@import "buttons.css";
+@import "text.css";
+@import "imgs.css";
+@import "cursor.css";
+
+@import "game.css";
+@import "counter.css";
+
+::selection {
+  background-color: rgba(155, 155, 155, 0.3);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    padding: 40px 100px 0 100px;
+    margin: 0;
+
+    display: flex;
+    box-sizing: border-box;
+    min-height: 100dvh;
+    flex-direction: column;
+    gap: 40px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 20px 40px;
+    border-radius: var(--container-border) var(--container-border) 0 0;
+
+    color: var(--light-color);
+    background-color: var(--dark-color);
+}
+
+div.footer-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
